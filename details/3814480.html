@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113584454-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-113584454-1');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>Instituto Nacional de la Propiedad Industrial - INPI - Argentina</title>
+    <meta name="title" content="Instituto Nacional de la Propiedad Industrial - INPI - Argentina">
+    <meta name="description" content="Portal de trámites: Marcas, Patentes, Modelos y Diseños , Transferencia de Tecnología.">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    
+        
+    <link href="/assets/plugins/bootstrap/css/bootstrap-theme.css" rel="stylesheet"/>
+<link href="/assets/plugins/bootstrap/css/bootstrap-theme.css.map" rel="stylesheet"/>
+<link href="/assets/plugins/bootstrap/css/bootstrap-theme.min.css.map" rel="stylesheet"/>
+<link href="/assets/plugins/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+<link href="/assets/plugins/bootstrap/css/bootstrap.css.map" rel="stylesheet"/>
+<link href="/assets/plugins/bootstrap/css/bootstrap.min.css.map" rel="stylesheet"/>
+<link href="/assets/plugins/animate.css" rel="stylesheet"/>
+<link href="/assets/plugins/line-icons/line-icons.css" rel="stylesheet"/>
+<link href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css" rel="stylesheet"/>
+<link href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js" rel="stylesheet"/>
+<link href="/assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8-rtl.css" rel="stylesheet"/>
+<link href="/assets/plugins/sky-forms-pro/skyforms/css/sky-forms-ie8.css" rel="stylesheet"/>
+<link href="/assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css" rel="stylesheet"/>
+<link href="/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms-rtl.css" rel="stylesheet"/>
+<link href="/assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css" rel="stylesheet"/>
+
+    <link href="/assets/css/headers/header-default-centered.css" rel="stylesheet"/>
+<link href="/assets/css/headers/header-default.css" rel="stylesheet"/>
+<link href="/assets/css/footers/footer-v1.css" rel="stylesheet"/>
+
+    <link href="/assets/css/custom.css" rel="stylesheet"/>
+
+    <link href="/assets/css/pages/page_search.css" rel="stylesheet"/>
+<link href="/assets/css/pages/page_search_inner.css" rel="stylesheet"/>
+<link href="/assets/css/pages/page_search_inner_tables.css" rel="stylesheet"/>
+
+    <link href="/assets/css/theme-colors/default.css" rel="stylesheet"/>
+<link href="/assets/css/theme-skins/dark.css" rel="stylesheet"/>
+
+
+    <link rel="stylesheet" href="/assets/css/shop.style.css">
+    <link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/pages/log-reg-v3.css">
+    <link href="/assets/css/jAlert.css" rel="stylesheet" />
+    <link href="/assets/css/blocks.css" rel="stylesheet" />
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/bootstrap-table.min.css" rel="stylesheet" />
+    <script src="/assets/plugins/jquery/jquery.js"></script>
+<script src="/assets/plugins/bootstrap/js/bootstrap.js"></script>
+<script src="/assets/plugins/back-to-top.js"></script>
+<script src="/assets/plugins/jquery.parallax.js"></script>
+<script src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+
+    <script src="/assets/js/custom.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/plugins/owl-carousel-rtl.js"></script>
+<script src="/assets/js/plugins/owl-carousel.js"></script>
+<script src="/assets/js/plugins/style-switcher-rtl.js"></script>
+<script src="/assets/js/plugins/style-switcher.js"></script>
+
+    <script src="/assets/plugins/counter/waypoints.js"></script>
+<script src="/assets/plugins/counter/jquery.counterup.js"></script>
+
+    
+
+    <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+    <script src="/assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+    <script src="/assets/js/shop.app.js"></script>
+    
+    <script src="/Scripts/Funciones.js?f=637831511975290685" type="text/javascript"></script>
+
+    <script src="/assets/js/jAlert-functions.js"></script>
+    <script src="/assets/js/jAlert.js"></script>
+    <script src="/Scripts/easytimer.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        $("#modal-launcher, #modal-background, #modal-close").click(function () {
+            $("#modal-content, #modal-background").toggleClass("active");
+        });
+    });
+
+
+
+    $(document).ready(function() {
+        session.startTimeOut();
+        //if(sessionStorage.getItem('mensajeError')!=1)
+        //{
+        //    $('#errorModal').modal('show');
+        //    sessionStorage.setItem('mensajeError', 1);
+        //}
+     
+    });
+
+    var session =
+    {
+        self: this,
+        timeOut: 0,
+        timer: new easytimer.Timer(),
+
+        startTimeOut: function()
+        {
+            var isLogued = 'False';
+            if (isLogued == "True")
+            {
+                var sessionTimeoutWarning = 90;
+                var sessionTimeout = 20 * 60;
+                var sTimeout = ((parseInt(sessionTimeout) - parseInt(sessionTimeoutWarning))) * 1000;
+                timeOut = setTimeout(this.SessionWarning, sTimeout);
+            }
+        },
+
+        SessionWarning: function() {
+            var that = self;
+
+            $('#sessionModal').modal('show');
+            $('#sessionModal').on('shown.bs.modal', function () {
+                $('#btnExtendSession').trigger('focus');
+                $('#btnExtendSession').on("click", function () {
+                    window.clearTimeout(that.timeOut);
+                    session.timer.stop();
+
+                    $.ajax({
+                        method: "POST",
+                        url: '/Session/KeepAlive',
+                        dataType: 'json',
+                        contentType: 'application/json; charset=utf-8',
+                        success: function (data) {
+                            session.startTimeOut();
+                        },
+                        error: function (data) {
+                        },
+                        async: true,
+                    });
+                });
+
+                $('#btnLogOut').on("click", function () {
+                    window.location.href = '/Session/CerrarSession';
+                });
+
+                var sessionTimeoutWarning = 90;
+                var countDownStart = new Date(0, 0, 0, 0, 0, sessionTimeoutWarning, 0);
+                var minutes = (countDownStart.getMinutes() < 10)? "0" + countDownStart.getMinutes() : countDownStart.getMinutes();
+                var seconds = (countDownStart.getSeconds() < 10)? "0" + countDownStart.getSeconds() : countDownStart.getSeconds();
+
+                $('#seconds').text(minutes + ":" + seconds);
+
+                session.timer.start({countdown: true, startValues: {seconds: sessionTimeoutWarning }});
+                
+                session.timer.addEventListener('secondsUpdated', function (e) {
+                    var minutes = session.timer.getTimeValues().minutes;
+                    var seconds = session.timer.getTimeValues().seconds;
+
+                    if (minutes < 10)
+                        minutes = "0" + minutes;
+                    if (seconds < 10)
+                        seconds = "0" + seconds;
+
+                    var timeLeft = minutes + ":" + seconds;
+                    $('#seconds').text(timeLeft);
+                });
+
+                session.timer.addEventListener('targetAchieved', function (e) {
+                    if(!(typeof flag !== 'undefined' && flag==1))
+                        $('#btnLogOut').trigger("click");
+                });
+            });
+        }
+    };
+    </script>   
+</head>
+
+<body class="header-fixed header-fixed-space-default">
+    <!-- Session Modal -->
+    <div class="modal fade" id="sessionModal" style="z-index:999999" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLongTitle">Su sesión expirará pronto</h5>                        
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">
+                        <span style="font-size:large" aria-hidden="true">Su sesión expirará en </span>
+                        <span style="font-size:large" class="font-bold" aria-hidden="true" id="seconds"></span>
+                        <br />
+                        <span aria-hidden="true">Para seguir conectado presione el botón Continuar.</span>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnLogOut" class="btn btn-secondary" data-dismiss="modal">Cerrar Sesión</button>
+                    <button type="button" id="btnExtendSession" class="btn btn-primary" data-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Session Modal -->
+    <!-- error Modal -->
+    <div class="modal fade" id="errorModal" style="z-index:999999" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <p class="text-center">
+                        <span style="font-size:large" aria-hidden="true">Queremos informarte que el servicio de autenticación de la AFIP que utilizamos para ingresar a nuestro Portal de tramites esta teniendo inconvenientes.  Si no te podes autenticar, espera unos minutos y volvé a inténtalo. Disculpa las molestias.</span>
+
+                        <br />
+
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- error Modal -->
+    <div class="wrapper">
+        <div class="header header-sticky">
+            <div class="topbar-v1">
+                <div class="container" style="width:100%">
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <ul class="list-inline top-v1-contacts">
+                                <li>
+                                    
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-8" style="padding-left:0px">
+                                    <ul class="list-inline top-v1-data">
+                                        <li>
+                                            <i class="glyphicon glyphicon-user"></i>
+                                            <a href="https://auth.afip.gob.ar/contribuyente_/?action=SYSTEM&system=inpi_portal" style="font-size:8pt" class="modaltext">Inicio sesion AFIP</a>
+                                        </li>
+                                        <li>
+                                            <i class="glyphicon glyphicon-envelope"></i>
+                                            <a href="/Home/Contacto" style="font-size:8pt" class="modaltext">Contacto</a>
+                                        </li>
+
+                                    </ul>
+                        </div>
+
+                    </div>
+                </div>
+                    </div>
+                    <div class="navbar navbar-default mega-menu" role="navigation">
+                        <div class="container">
+                            <div class="navbar-header">
+                                <!-- Toggle get grouped for better mobile display -->
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="fa fa-bars"></span>
+                                </button>
+                                <!-- End Toggle -->
+                                <!-- Logo -->
+                                <a class="navbar-brand" href="/Home/index">
+                                    <img src="/assets/img/logo.png" alt="Logo">
+                                </a>
+                                <!-- End Logo -->
+                            </div>
+                            <script src="/Scripts/Menu/_Menu.js" type="text/javascript"></script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-45091421-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+<div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
+    <ul class='nav navbar-nav' id="menuPrincipal"></ul>   
+</div>
+
+                        </div>
+
+                    </div><!--/end container-->
+                </div>
+    </div>
+    <div id="body">
+        
+
+        
+
+
+<script>
+    var opos = JSON.parse('[]');
+    var vistas = JSON.parse('[]');
+    var llamados = JSON.parse('[]');
+    var reservas1 = JSON.parse('[]');
+    var reservas2 = JSON.parse('[]');
+    var transferencias = JSON.parse('[]');
+    var CambioRubro = JSON.parse('[]');
+    var Dictamenes = JSON.parse('[]');
+    var Pedidos_Reconsideracion = JSON.parse('[]');
+    var Demandas = JSON.parse('[]');
+    var Caducidades_Nulidades = JSON.parse('[]');
+    var Renuncias = JSON.parse('[]');
+    var Acta=3814480;
+
+
+</script>
+<div class="breadcrumbs">
+    <div class="container" style="margin-top:30px;">
+        <h1 class="pull-left">Resultado de acta 3814480</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="/Home/Index">Inicio</a></li>           
+            <li class="active">Resultado de Marcas</li>
+        </ul>
+    </div>
+</div>
+
+<br />
+<form id="frmGD" action='/Home/GrillaDigital' method='post' class="log-reg-block sky-form" style=" border:none">
+    <div class="col-sm-7">
+        <input type='text' name='fname' size='20' value='1-3814480' hidden />
+    </div>
+    <div class="col-sm-2" style="padding:0px;">
+        <section>
+            <label class="input">
+                <input onClick="$('#frmGD').submit();" type="button" value="GRILLA DIGITAL" class="button" style="border-color: #015197; color: #015197; height:40px;  margin:5px;">
+            </label>
+        </section>
+    </div>
+    <div class="col-sm-3" style="padding:0px;"></div>
+</form>
+<br />
+    <br />
+    <br /> 
+
+<div class="container">
+    <div class="panel-group acc-v1" id="accordion-1" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-1" href="#collapse-One" aria-expanded="false">
+                        DATOS GENERALES
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-One" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input" style='width: 85%; float: left;'>
+                        <div class="col-sm-4">
+                            <section>
+                                <label class="input">
+                                    PRESENTACIÓN: <span class="text-danger"> 27/06/2019</span>
+                                </label>
+                            </section>
+                        </div>
+                        <div class="col-sm-4">
+                            <section>
+                                <label class="input">
+                                    DENOMINACIÓN: <span class="text-danger">CENTRO LAVALLE GRAFICA Y COPIADO INTEGRAL</span>
+                                </label>
+                            </section>
+                        </div>
+                        <div class="col-sm-4">
+                            <section>
+                                <label class="input">
+                                    TIPO DE MARCA: <span class="text-danger">Mixta</span>
+                                </label>
+                            </section>
+                        </div>
+                        <div class="col-sm-12">
+                            <section>
+                                <label class="input">
+                                    DOMICILO LEGAL: AV DE MAYO 1123 Piso 1
+                                </label>
+                            </section>
+                        </div>
+                        <div class="col-sm-4">
+                            <section>
+                                <label class="input">
+                                    RENOVACION DE: - 2303130
+                                </label>
+                            </section>
+                        </div>
+                        <div class="col-sm-4">
+                            <section>
+                                <label class="input">
+                                    RENOVADA POR: 
+                                </label>
+                            </section>
+                        </div>
+                        <div class="col-sm-4">
+                            <section>
+                                <label class="input">
+                                    NRO DE EFECTOR: <span class="text-danger"> ----</span>
+                                </label>
+                            </section>
+                        </div>
+                    </div>
+                        <div id="logo" style="width: 15%; height: 100px; float: right;">
+                            <a href="#" id="logo"> <img src="data:image/jpg;base64,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" style="max-width: 175px;max-height: 100px;" /></a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-group acc-v1" id="accordion-2" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-2" href="#collapse-two" aria-expanded="false">
+                        TITULARIDAD
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-two" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+
+
+
+                    <div class="login-input reg-input">
+                            <div class="col-sm-4">
+                                <section>
+                                    <label class="input">
+                                        CLASE: <span class="text-danger"> 41</span>
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-12">
+                                <section>
+                                    <label class="input">
+                                        PROTECCION: <span class="text-danger">Toda la clase </span>
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-12">
+                                <section>
+                                    <label class="input">
+                                        LIMITACION: 
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-4">
+                                <section>
+                                    <label class="input">
+                                        NOMBRE: <span class="text-danger"> AKSELRAD, DANTE NATAN 100.00%</span>
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-4">
+                                <section>
+                                    <label class="input">
+                                        TIPO DNI: 1-Documento Nacional de Identidad
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-4">
+                                <section>
+                                    <label class="input">
+                                        DNI: 24270829
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-8">
+                                <section>
+                                    <label class="input">
+                                        PAIS: ARGENTINA
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-4">
+                                <section>
+                                    <label class="input">
+                                        CUIT: 20242708297
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-12">
+                                <section>
+                                    <label class="input">
+                                        TERRITORIO LEGAL: 
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-6">
+                                <section>
+                                    <label class="input">
+                                        DOMICILIO REAL: <span class="text-danger"> MAIP&#218; 833</span>
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-6">
+                                <section>
+                                    <label class="input">
+                                        LOCALIDAD: CABA CP. 1006
+                                    </label>
+                                </section>
+                            </div>
+                            <div class="col-sm-12">
+                                <hr />
+                            </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-group acc-v1" id="accordion-3" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-3" href="#collapse-tree" aria-expanded="false">
+                        GESTION DEL TRAMITE
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-tree" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+
+                            <div class="login-input reg-input">
+                                    <div class="col-sm-6">
+                                        <section>
+                                            <label class="input">
+                                                AGENTE:<span class="text-danger"> 0 PARTICULAR</span>
+                                            </label>
+                                        </section>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <section>
+                                            <label class="input">
+                                                CARACTER:
+                                                <span class="text-danger">
+Gestor Ratificado                                                </span>
+                                            </label>
+                                        </section>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <section>
+                                            <label class="input">
+                                                AGENTE:<span class="text-danger"> 502 KEARNEY, ROBERTO ROSARIO</span>
+                                            </label>
+                                        </section>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <section>
+                                            <label class="input">
+                                                CARACTER:
+                                                <span class="text-danger">
+Gestor Ratificado                                                </span>
+                                            </label>
+                                        </section>
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-4" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-4" href="#collapse-four" aria-expanded="false">
+                        REGLAMENTO DE USO
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-four" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+
+                            <div class="login-input reg-input">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-5" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-5" href="#collapse-five" aria-expanded="false">
+                        PRIORIDADES
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-five" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+
+                            <div class="login-input reg-input">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-6" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-6" href="#collapse-six" aria-expanded="false">
+                        PUBLICACIÓN
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-six" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+
+                            <div class="login-input reg-input">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-7" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-7" href="#collapse-seven" aria-expanded="false">
+                        OPOSICIONES
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-seven" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaopos">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="Oponente">OPONENTE</th>
+                                            <th data-field="Fecha_Presentacion" data-formatter="dateFormat">PRESENTACIÓN</th>
+                                            <th data-field="Fecha_Notificacion" data-formatter="dateFormat">FEC NOTIF</th>
+                                            <th data-field="Fecha_Vencimiento" data-formatter="dateFormat">FEC VENC</th>
+                                            <th data-field="Numero">NÚMERO</th>
+                                            <th data-field="Agente">AGENTE</th>
+                                            <th data-field="Caracter">CARACTER</th>
+                                            <th data-field="Fecha_Levantamiento" data-formatter="dateFormat">FEC LEVAN</th>
+                                            <th data-field="Numero" data-formatter="verFormat">EXTRAS</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-8" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-8" href="#collapse-eight" aria-expanded="false">
+                        VISTAS Y NOTIFICACIONES
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-eight" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaVistas">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="Fecha_Contestacion" data-formatter="dateFormat">CONTESTACIÓN</th>
+                                            <th data-field="Fecha_Vista" data-formatter="dateFormat">FECHA</th>
+                                            <th data-field="Fecha_Notificacion" data-formatter="dateFormat">FEC NOTIF</th>
+                                            
+                                            <th data-field="Tipo">TIPO</th>
+                                            <th data-field="Cod_VistaExp" data-formatter="verVistaFormat">EXTRAS</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-9" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-9" href="#collapse-nine" aria-expanded="false">
+                        RESOLUCIÓN: [ Proyecto de Concesion ]
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-nine" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                        <div class="col-sm-3">
+                                            <section>
+                                                <label class="input">
+                                                    FEC DE PROY:   <span class="text-danger">28/12/2020</span>                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <section>
+                                                <label class="input">
+                                                    NRO: <span class="text-danger">3134017</span>                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <section>
+                                                <label class="input">
+                                                    TIPO: <span class="text-danger">Concedida</span>
+                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <section>
+                                                <label class="input">
+                                                    MOTIVO: <span class="text-danger"></span>
+                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <section>
+                                                <label class="input">
+                                                    NOTIFICACION: <span class="text-danger">03/02/2021</span>                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <section>
+                                                <label class="input">
+                                                    OBSERVACIÓN:<span class="text-danger"> Segun disposicion Nro: DI-2021-3-APN-DNM#INPI</span>
+                                                </label>
+                                            </section>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <section>
+                                                <label class="input">
+                                                    DISPOSICION:                                                            <span> Fecha: </span> <span class="text-danger">  12/01/2021</span>
+                                                        <span> - Numero: </span> <span class="text-danger">  DI-2021-3-APN-DNM#INPI</span>
+                                                </label>
+                                            </section>
+                                        </div>
+                                            <div class="col-sm-12">
+                                                <section>
+                                                    <label class="input">
+                                                        VENCE:<span class="text-danger"> 22/07/2029 12:03:00</span>
+                                                    </label>
+                                                </section>
+                                            </div>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-10" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-10" href="#collapse-ten" aria-expanded="false">
+                        UBICACIÓN DEL EXPEDIENTE
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-ten" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <div class="col-sm-12">
+                                    <section>
+                                        <label class="input">
+                                            UBICACIÓN ACTUAL: <span class="text-danger">2020-12-28 Divisi&#243;n Resoluciones</span>
+                                        </label>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-11" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-11" href="#collapse-eleven" aria-expanded="false">
+                        LLAMADOS DE ATENCIÓN
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-eleven" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaLlamados">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="Llamado">LLAMADO</th>
+                                            <th data-field="Clase">CLASE</th>
+                                            <th data-field="Agente">AGENTE</th>
+                                            <th data-field="Codigo_Postal">COD. POSTAL</th>
+                                            <th data-field="Domicilio_Legal">DOM. LEGAL</th>
+                                            <th data-field="Fecha_Presentacion" data-formatter="dateFormat">FEC. PRESENT.</th>
+                                            <th data-field="Boletin">BOLETIN</th>
+                                            <th data-field="Extras" data-formatter="verLLamadoFormat"></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-12" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-12" href="#collapse-twelve" aria-expanded="false">
+                        RESERVAS POR ACTA
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-twelve" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillareservas1">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="Acta_Reservada">ACTA RESERV.</th>
+                                            <th data-field="ActaReservadora">ACTA RESERVADORA</th>
+                                            <th data-field="Clase_Reservada">CLASE RESERV.</th>
+                                            <th data-field="Clase_Reservadora">CLASE RESERVADORA</th>
+                                            <th data-field="Fecha_Reserva" data-formatter="dateFormat">FEC RESERVA</th>
+                                            <th data-field="Fecha_Levantamiento" data-formatter="dateFormat">FEC. LEVANTAM.</th>
+                                            <th data-field="Motivo_Levantamiento">MOTIVO LEVANTAMIENTO</th>
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-13" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-13" href="#collapse-thirteen" aria-expanded="false">
+                        RESERVAS POR ACTA
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-thirteen" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillareservas2">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="Acta_Reservada">ACTA RESERV.</th>
+                                            <th data-field="Clase_Reservada">CLASE RESERVADA</th>
+
+                                            <th data-field="Marca">MARCA</th>
+                                            <th data-field="Fecha_Levantamiento" data-formatter="dateFormat">FEC. LEVANTAM.</th>
+                                            <th data-field="Fecha_Reserva" data-formatter="dateFormat">FEC RESERVA</th>
+
+
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-14" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-14" href="#collapse-fourteen" aria-expanded="false">
+                        TRANSFERENCIA
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-fourteen" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaTransferencias" data-unique-id="Cod_Trans">
+                                    <thead>
+                                        <tr>
+
+                                            <th data-field="Numero_Agente">NUM AGENTE</th>
+                                            <th data-field="Fecha_Toma_Razon" data-formatter="dateFormat">FEC T. RAZ.</th>
+                                            <th data-field="Fecha_Presentacion" data-formatter="dateFormat">FEC PRES.</th>
+                                            <th data-field="Estado">ESTADO</th>
+                                            <th data-field="Tipo_Transferencia">TIPO</th>
+                                            <th data-field="Clase">CLASE</th>
+                                            <th data-field="Nombre_Titular">TIPO Y NOMBRE DEL TITULAR</th>
+                                            <th data-field="Porcentaje">PORCENTAJE</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-15" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-15" href="#collapse-fifteen" aria-expanded="false">
+                        CAMBIO DE RUBRO
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-fifteen" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaCambioRubro">
+                                    <thead>
+                                        <tr>
+
+                                            <th data-field="Estado">ESTADO</th>
+                                            <th data-field="Fecha_Toma_Razon" data-formatter="dateFormat">FEC T. RAZ.</th>
+                                            <th data-field="Denominacion_Social_Anterior">Denominacion Social Anterior</th>
+                                            <th data-field="Fecha_Presentacion" data-formatter="dateFormat">FEC PRES.</th>
+                                            <th data-field="Resultante">Resultante</th>
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-16" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-16" href="#collapse-sixteen" aria-expanded="false">
+                        DICTAMENES
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-sixteen" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaDictamenes">
+                                    <thead>
+                                        <tr>
+
+                                            <th data-field="Fecha_Dictamen" data-formatter="dateFormat">FECHA DICTAMEN</th>
+                                            <th data-field="Fecha_Ingreso" data-formatter="dateFormat">FECHA INGR</th>
+                                            <th data-field="Resuelto">RESUELTO</th>
+                                            <th data-field="Observacion">OBSERVACION</th>
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-17" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-17" href="#collapse-seventeen" aria-expanded="false">
+                        PEDIDOS DE RECONSIDERACION
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-seventeen" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaPedRecon">
+                                    <thead>
+                                        <tr>
+
+                                            <th data-field="Fecha_Presentacion" data-formatter="dateFormat">FEC PRESENTACION</th>
+                                            <th data-field="Fecha_notificacion" data-formatter="dateFormat">FEC NOTIF</th>
+                                            <th data-field="Fecha_Decision" data-formatter="dateFormat">FEC DECISION</th>
+                                            <th data-field="decision">DECISION</th>
+                                            <th data-field="observaciones">OBSERVACIONES</th>
+
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-18" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-18" href="#collapse-eighteen" aria-expanded="false">
+                        DEMANDAS
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-eighteen" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaDemandas">
+                                    <thead>
+                                        <tr>
+
+                                            <th data-field="Ubicación">UBICACIÓN</th>
+                                            <th data-field="Numero">NÚMERO</th>
+                                            <th data-field="Fecha_Presentacion" data-formatter="dateFormat">PRESENTACION</th>
+                                            <th data-field="Inicio" data-formatter="dateStringFormat">INICIO</th>
+                                            <th data-field="Extras" data-formatter="verAutosFormat">EXTRAS</th>
+
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-19" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-19" href="#collapse-nineteen" aria-expanded="false">
+                        CADUCIDADES / NULIDADES
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-nineteen" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaCaducidadesNulidades">
+                                    <thead>
+                                        <tr>
+
+                                            <th data-field="Numero">NÚMERO OFICIO</th>
+                                            <th data-field="Fecha_Presentacion" data-formatter="dateFormat">FECHA PRESENTACION</th>
+                                            <th data-field="Tipo">TIPO</th>
+                                            <th data-field="Estado" data-formatter="dateStringFormat">ESTADO</th>
+                                            <th data-field="Fecha_Publicacion" data-formatter="dateFormat">FECHA PUBLICACION</th>
+                                            <th data-field="Autos" data-formatter="verAutosFormat">AUTOS</th>
+
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panel-group acc-v1" id="accordion-20" style="margin-bottom:0px;">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-20" href="#collapse-twenty" aria-expanded="false">
+                        RENUNCIAS
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-twenty" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <table class="table" id="tblGrillaRenuncias">
+                                    <thead>
+                                        <tr>
+
+                                            <th data-field="Numero">NÚMERO</th>
+                                            <th data-field="Fecha_Presentacion" data-formatter="dateFormat">FECHA PRESENTACION</th>
+                                            <th data-field="Agente">AGENTE</th>
+                                            <th data-field="Tipo">TIPO</th>
+                                            <th data-field="Resultado">RESULTADO</th>
+                                            <th data-field="fecha_toma_razon" data-formatter="dateFormat">TOMA RAZ</th>
+
+
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-20" href="#collapse-twenty" aria-expanded="false">
+                        OBSERVACIONES
+                    </a>
+                </h4>
+            </div>
+            <div id="collapse-twenty" class="panel-collapse collapse in" aria-expanded="true">
+                <div class="panel-body">
+                    <div class="login-input reg-input">
+                        <div class="col-sm-12">
+                            <div class="login-input reg-input">
+                                <section>
+                                    <label class="input">
+                                        <span class="text-danger">SE DEJA CONSTANCIA QUE SE RENUEVA LA MARCA &quot;CENTRO LAVALLE GRAFICA Y COPIADO INTEGRAL (MIXTA)&quot; N&#186; 2.303.130 EN CLASE 41 INT.-  VENCIMIENTO: 22/07/2019</span>
+                                    </label>
+                                </section>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <form enctype="multipart/form-data" id="mc-action" action="/Marcas/Nuevas" method="post" class="log-reg-block sky-form" style=" border:none">
+
+        <div class="col-sm-10"></div>
+        
+        <div class="col-sm-2" style="padding:0px;">
+            <section>
+                <label class="input">
+                    <input id="BtnImprimir" type="button" name="BtnImprimir" value="IMPRIMIR" class="button" style="border-color: #015197; color: #015197; height:40px;  margin:5px;">
+                </label>
+            </section>
+        </div>
+
+    </form>
+</div>
+<br />
+<script src="/Scripts/bootstrap-table.min.js"></script>
+<script src="/Scripts/bootstrap-table-es-AR.js"></script>
+<script src="/Scripts/MarcasConsultas/Resultado.js"></script>
+<link href="/assets/css/Resultados.css" rel="stylesheet" />
+    </div>
+
+    <!--=== Footer Version 1 ===-->
+    <div class="footer-v1">
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <a href="index.html"><img id="logo-footer" class="footer-logo" src="/assets/img/logon.png" alt=""></a>
+                        <p>
+                            El Instituto Nacional de la Propiedad Industrial (INPI) es un ente autárquico en el ámbito del ministerio de desarrollo productivo y es la autoridad de aplicación de las leyes de protección de los derechos de propiedad industrial.
+                        </p>
+                        
+                    </div><!--/col-md-3-->
+                   
+                    <!-- End About -->
+                    <!-- Latest -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="posts">
+                            <div class="headline"><h2>Noticias Recientes</h2></div>
+                            <ul class="list-unstyled latest-list">
+                              
+                                <li><a href="/Novedades/ListaNovedades" target="_blank">Novedades de la última version</a></li>
+                                  
+                            </ul>
+                        </div>
+                        <!-- Social Links -->
+                        <div class="social-share">
+                            <div class="headline"><h2>Redes sociales</h2></div>
+                            <ul class="list-inline" style="font-size: 36px;">
+                                <li><a href="http://www.facebook.com/INPIArgentina/" target="_blank" rel="noreferrer"><span class="sr-only">Facebook</span><i class="icono-arg-facebook-f-" aria-hidden="true"></i></a></li>
+                                <li><a href="https://twitter.com/INPI_Argentina/" target="_blank" rel="noreferrer"><span class="sr-only">Twitter</span><i class="icono-arg-twitter-pajaro" aria-hidden="true"></i></a></li>
+                                <li><a href="http://www.instagram.com/inpi_argentina/" target="_blank" rel="noreferrer"><span class="sr-only">Instagram</span><i class="icono-arg-instagram" aria-hidden="true"></i></a></li>
+                                <li><a href="http://www.linkedin.com/company/instituto-nacional-de-la-propiedad-industrial" target="_blank" rel="noreferrer"><span class="sr-only">LinkedIn</span><i class="icono-arg-linkedin-in" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div> 
+                    </div><!--/col-md-3-->
+                    <!-- End Latest -->
+                    <!-- Link List -->
+                    <div class="col-md-3 md-margin-bottom-40">
+                        <div class="headline"><h2>Links de utilidad</h2></div>
+                        <ul class="list-unstyled link-list">
+                            <li><a href="http://www.inpi.gob.ar">INPI web institucional</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/Boletines?Tipo_Item=3">Boletines de Marcas</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/Boletines?Tipo_Item=2">Boletines de Patentes</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/Instructivos/entidad_agrupadora.mp4">Video entidades agrupadoras</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="/Instructivos/Instructivo_Entidad_agrupadora.pdf">Instructivo entidades agrupadoras</a><i class="fa fa-angle-right"></i></li>
+</ul>
+                         
+                    </div><!--/col-md-3-->
+                    <!-- End Link List -->
+                    <!-- Address -->
+                    <div class="col-md-3 map-img md-margin-bottom-40">
+                        <div class="headline"><h2>Contacto</h2></div>
+                        <ul class="list-unstyled latest-list">
+                            <li><a href="mailto:infomarcas@inpi.gob.ar">Dirección Nacional De Marcas infomarcas@inpi.gob.ar </a> </li>
+                            <li><a href="mailto:infopatentes@inpi.gob.ar">Administración Nacional De Patentes infopatentes@inpi.gob.ar</a></li>
+                            <li><a href="mailto:infomodelos@inpi.gob.ar">Dirección De Modelos Y Diseños Industriales infomodelos@inpi.gob.ar</a></li>
+                            <li><a href="mailto:infotrantec@inpi.gob.ar">Dirección De Transferencia De Tecnología infotrantec@inpi.gob.ar</a></li>
+                            <li><a href="mailto:infotecnol@inpi.gob.ar">Departamento De Información Tecnológica infotecnol@inpi.gob.ar</a></li>
+                            <li><a href="mailto:infolegales@inpi.gob.ar">Dirección De Asuntos Legales infolegales@inpi.gob.ar</a></li>
+                            <li><a href="mailto:mesadeentradas@inpi.gob.ar">Mesa De Entradas mesadeentradas@inpi.gob.ar</a></li>
+                            <li><a href="mailto:infoinpi@inpi.gob.ar">Consultas generales (u otras consultas): infoinpi@inpi.gob.ar</a></li>
+                            <li><a href="mailto:infoagentes@inpi.gob.ar">Agentes:<br /> infoagentes@inpi.gob.ar</a></li>
+
+                        </ul>
+                        <address class="md-margin-bottom-40">
+                            Dirección: Av. Paseo Colón 717, Ciudad Autónoma de Buenos Aires <br />
+                            Código postal: C1063ACH <br />
+                         <!--   Tel: 0800 222 4674<br /> -->
+                            <a href="/Home/Contacto" class="footertext">Más Información</a>
+                        </address>
+                    </div><!--/col-md-3-->
+                    
+
+
+
+
+                </div>
+            </div>
+        </div><!--/footer-->
+        <div class="copyright" style="background-color: #f0f0f0;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <p style="color:black;">
+                           2022 &copy; Todos los derechos reservados.| <a href="#" class="footertext" style="color:black">Terminos de servicios</a>
+                        </p>
+                    </div>
+                     <div class="col-md-2">
+                    <a href="https://www.macroseguridad.net" target="_blank"/><img src="/Images/logo_sectigo.png"  border="0" /></a>
+                    </div>
+                      
+                    <div class="col-md-2">
+                        <a href="https://www.argentina.gob.ar/produccion" target="_blank" /><img src="/Images/min_desarrollo_productivo.png" border="0" style="width: 150px;"/></a>
+                    </div>
+                        <!-- End Social Links -->
+                    </div>
+            </div>
+        </div><!--/copyright-->
+    </div>
+    <!--=== End Footer Version 1 ===-->
+    </div>
+    <section class="container">
+        <div id="modal-background"></div>
+        <div id="modal-content" style="height: 330px">
+            <script src="/Scripts/Usuiarios/Login.js"></script>
+<form id="form_login" class="log-reg-block sky-form" method="post">
+    
+        <div id="ingreso">
+        <h2>Usuarios Empadronados</h2>
+            <section>
+                <label class="input login-input">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input id="Cuit" type="number" placeholder="Cuit" name="usuario" class="form-control">
+                    </div>
+                </label>
+            </section>
+            <section>
+                <label class="input login-input no-border-top">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                        <input id="password" type="password" placeholder="Clave" name="clave" class="form-control">
+                    </div>
+                </label>
+            </section>
+            <section>
+                <div class="col-xs-6">
+                    <div id="btnValidarp" class="btn-u btn-u-sea-shop btn-block margin-bottom-20" onclick="ValidaLogin();">Ingresar</div>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <a href="/Home/Index"><div id="#modal-close" class="btn-u btn-u-sea-shop btn-block margin-bottom-20">Cerrar</div></a>
+                </div>
+            </section>
+        </div>
+        <div id="blanqueo" style="display:none;" >
+        <h2>Ingrese su cuit</h2>
+        <h5>Se le enviara un correo a su cuenta registrada para que restablezca la contraseña </h5>
+            <hr />
+            <section>
+                <label class="input login-input">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                        <input id="CuitB" type="number" placeholder="Cuit" name="CuitB" class="form-control">
+                    </div>
+                </label>
+            </section>
+            <section>
+                <div class="col-xs-6">
+                    <div id="btnValidarp" class="btn-u btn-u-sea-shop btn-block margin-bottom-20" onclick="ValidaLogin();">Restablecer</div>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <a href="/Home/Index"><div id="#modal-close" class="btn-u btn-u-sea-shop btn-block margin-bottom-20">Cerrar</div></a>
+                </div>
+            </section>
+        </div>
+
+        <div class="row margin-bottom-5">
+                <div class="col-xs-6">
+                    <p class="text-center"> <a href="/Usuarios/Registro">Registrate</a></p>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <a href="#" onclick="mostrar('blanqueo'); ocultar('ingreso');Limpiarinput()">Olvidaste tu clave?</a>
+                </div>
+        </div>
+
+</form>
+<script>
+    function Limpiarinput()
+    {
+        $("#Cuit").val('');
+        $("#password").val('')
+        
+    }
+
+</script>
+   
+
+
+        </div>
+    </section>
+    <script src="/Captcha/jquery.motionCaptcha.0.2.js"></script>
+    <link href="/Captcha/jquery.motionCaptcha.0.2.css" rel="stylesheet" />
+</body>
+</html>
